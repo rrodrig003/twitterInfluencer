@@ -1,6 +1,6 @@
 import {  createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import getInfluencerByRatio from '../../utils'
+import axios from 'axios'
 
 const FIND_INFLUENCER = 'FIND_INFLUENCER'
 
@@ -20,13 +20,15 @@ const influencerReducer = (state = influencerState, action) => {
   }
 }
 
-export const fetchInfluencer = (searchTerm) => async dispatch => {
-  try {
-    const influencerObj = await getInfluencerByRatio(searchTerm, 50)
-    dispatch(findInfluencer(influencerObj))
-  } catch (error) {
-    console.log('##### ERROR IN INFLU THUNK ####', error)
-  }
+export const fetchInfluencer = (searchTerm) => dispatch => {
+  console.log('SEARCH TERM FROM FRON END', searchTerm)
+  axios.get(`http://localhost:3001/get/${searchTerm}`)
+    .then(({data}) => {
+      dispatch(findInfluencer(data))
+    })
+    .catch(e => {
+      console.log('##### ERROR IN INFLU THUNK ####', e)
+    })
 }
 const store = createStore(influencerReducer, applyMiddleware(thunkMiddleware))
 

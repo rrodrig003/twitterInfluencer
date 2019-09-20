@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import store from './store/store.js'
 
-const appEl = document.getElementById('app');
+const appEl = document.getElementById('root');
 
 ReactDOM.render(
 	<Provider store={store}>

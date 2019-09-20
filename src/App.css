@@ -1,5 +1,17 @@
+/* @import url('https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap'); */
+@import 'https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap';
+
 .App {
   text-align: center;
+  font-family: 'Bungee Inline', cursive;
+}
+
+.Title {
+  color: red;
+  text-align: center;
+  font-size:  4em;
+  font-family: 'Bungee Inline', cursive;
+  padding: 15px;
 }
 
 .App-logo {
@@ -31,3 +43,23 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* @import url('https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap');
+
+$colors: (
+  primary: rgb(253, 147, 135),
+  secondary: rgb(151, 174, 250),
+  accent: rgb(240, 240, 149),
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name)
+};
+
+
+.main-container {
+  background-color: #fff;
+  font-family: 'Bungee Inline', cursive;
+} */
+
