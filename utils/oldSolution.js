@@ -2,6 +2,8 @@ require('dotenv').config()
 const Twitter = require('twitter');
 const jsnx = require('jsnetworkx');
 
+// THIS CODE IS AN INITIAL SOLUTION I ATTEMPTED TO IDENTIFY "INFLUENCERS" - WAS NOT IMPLEMENTED IN PROJECT DUE TO UNDERLYING DATASET
+
 const twitterKeys = {
     consumer_key: process.env.TWITTER_CONSUMER_KEY,
     consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
