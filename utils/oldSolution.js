@@ -92,5 +92,3 @@ const getInfluencer = async () => {
   console.log(scoresObj[Object.keys(scoresObj).find(key => scoresObj[key] === scoresArray[0])],": ", scoresArray[0], scoresObj[Object.keys(scoresObj).find(key => scoresObj[key] === scoresArray[1])], ": ", scoresArray[1], scoresObj[Object.keys(scoresObj).find(key => scoresObj[key] === scoresArray[2])], ": ", scoresArray[2],)
   console.log('HIGHEST SCORED:', scoresObj[Object.keys(scoresObj).find(key => scoresObj[key] === scoresArray[0])])
 }
-
-getInfluencer();
